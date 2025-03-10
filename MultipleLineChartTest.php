@@ -22,7 +22,7 @@
 	 *
 	 */
 
-	include "libchart/libchart/classes/libchart.php";
+	include "../libchart/classes/libchart.php";
 
 	$chart = new LineChart();
 
@@ -73,10 +73,10 @@
 	$dataSet->addSerie("Product 4", $serie4);
 	$dataSet->addSerie("Product 5", $serie5);
 	$chart->setDataSet($dataSet);
- 
+
 	$chart->setTitle("Sales for 2006");
 	$chart->getPlot()->setGraphCaptionRatio(0.62);
-	$chart->render("libchart/libchart/classes/demo6.png");
+	$chart->render("generated/demo6.png");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -85,6 +85,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
 </head>
 <body>
-	<img alt="Line chart" src="libchart/demo/generated/demo6.png" style="border: 1px solid gray;"/>
+	<img alt="Line chart" src="generated/demo6.png" style="border: 1px solid gray;"/>
 </body>
 </html>
