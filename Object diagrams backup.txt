@@ -1,0 +1,72 @@
+@startuml
+
+class LoginModule {
+    - loginId: String
+    - password: String
+    + login(): void
+}
+
+class CustomerModule {
+    - profileDetails: String
+    + register(): void
+    + purchaseProduct(): void
+    + sendPurchaseRequest(): void
+    + approvePurchaseRequest(): void
+    + rejectPurchaseRequest(): void
+}
+
+class SellerModule {
+    + sellProducts(): void
+}
+
+class WorkerModule {
+    - profileDetails: String
+    - experienceDetails: String
+    + register(): void
+    + hireLaborers(): void
+}
+
+class DashboardModule {
+    + manageSettings(): void
+    + manageRecords(): void
+}
+
+class ArticleModule {
+    + postNews(): void
+    + postBlogs(): void
+}
+
+class CategoryModule {
+    - types: String[]
+    + createCategory(): void
+}
+
+class LocationModule {
+    + addCountry(): void
+    + addState(): void
+    + addCity(): void
+}
+
+class ProductsModule {
+    + sellProductsDirectly(): void
+    + sellProductsOnline(): void
+}
+
+class BillingReport {
+    - customerContactDetails: String
+    - billingDetails: String
+    - purchasedProductInfo: String
+    + generateBilling(): void
+}
+
+LoginModule --> CustomerModule
+LoginModule --> SellerModule
+LoginModule --> WorkerModule
+LoginModule --> DashboardModule
+DashboardModule --> ArticleModule
+DashboardModule --> CategoryModule
+DashboardModule --> LocationModule
+DashboardModule --> ProductsModule
+DashboardModule --> BillingReport
+
+@enduml
